@@ -13,11 +13,11 @@ function Layout() {
           <nav className="mt-5 text-white text-center">
             <Link
               className={`${
-                location.pathname == "/clients" ? "text-blue-300" : ""
+                location.pathname == "/new/client" ? "text-blue-300" : ""
               } hover:text-blue-300 text-2xl block`}
-              to="/clients"
+              to="/new/client"
             >
-              Clients
+              New Client
             </Link>
           </nav>
         </aside>

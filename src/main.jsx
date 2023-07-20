@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout";
 import Index, { loader as loaderClients } from "./pages/Index";
-
+import NewClient, { action as actionNewClient } from "./pages/NewClient";
 import "./index.css";
 const router = createBrowserRouter([
   {
@@ -16,8 +16,9 @@ const router = createBrowserRouter([
         loader: loaderClients,
       },
       {
-        path: "/clients",
-        element: <p>Clients</p>,
+        path: "/new/client",
+        element: <NewClient />,
+        action: actionNewClient,
       },
     ],
   },
