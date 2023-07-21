@@ -1,26 +1,45 @@
 import React from "react";
-import { Form, useActionData, useNavigate, redirect } from "react-router-dom";
+import {
+  useNavigate,
+  Form,
+  useLoaderData,
+  redirect,
+  useActionData,
+} from "react-router-dom";
 import FormComponent from "../components/Form";
 import Error from "../components/Error";
-import { addClient } from "../data/clients";
-export async function action({ request }) {
+import { getClient, updateClient } from "../data/clients";
+
+export async function loader({ params }) {
+  const client = await getClient(params.id);
+  return client;
+}
+export async function action({ request, params }) {
+  
   let information = await request.formData();
+  
   information = Object.fromEntries(information);
+  
   if (Object.values(information).includes("")) {
     return "All the fields must be filled";
   }
-  addClient(information);
+  await updateClient(params.id, information);
+
   return redirect("/");
 }
-function NewClient() {
-  const message = useActionData();
+function EditClient() {
   const navigate = useNavigate();
+  const loaderData = useLoaderData();
+  const actionData = useActionData()
+  console.log(actionData)
   return (
     <div>
       <header className="flex justify-between">
         <div>
-          <h1 className="text-4xl font-black text-blue-900">New Client</h1>
-          <p className="mt-3">Add a new client</p>
+          <h1 className="text-4xl font-black text-blue-900">
+            Edit Client Section
+          </h1>
+          <p className="mt-3">Edit the client</p>
         </div>
         <div>
           <button
@@ -33,12 +52,12 @@ function NewClient() {
       </header>
 
       <main className="bg-white shadow rounded-xl md:w-3/4 px-5 py-10 mt-20 mx-auto">
-        {message && <Error message={message} />}
+        {actionData && <Error message={actionData} />}
         <Form method="post">
-          <FormComponent />
+          <FormComponent client={loaderData} />
           <input
             type="submit"
-            value="Submit"
+            value="Save Changes"
             className="uppercase font-bold hover:cursor-pointer hover:bg-blue-900 p-3 bg-blue-800 block text-white w-full"
           />
         </Form>
@@ -47,4 +66,4 @@ function NewClient() {
   );
 }
 
-export default NewClient;
+export default EditClient;

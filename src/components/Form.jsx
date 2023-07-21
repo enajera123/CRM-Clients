@@ -1,6 +1,6 @@
 import React from "react";
 
-function Form() {
+function Form({client}) {
   return (
     <>
       <div className="mb-4">
@@ -13,6 +13,7 @@ function Form() {
           placeholder="Client's Name"
           id="name"
           name="name"
+          defaultValue={client?.name}
         />
       </div>
       <div className="mb-4">
@@ -25,6 +26,7 @@ function Form() {
           placeholder="Company Name"
           id="company"
           name="company"
+          defaultValue={client?.company}
         />
       </div>
       <div className="mb-4">
@@ -37,6 +39,7 @@ function Form() {
           placeholder="Ej: email@email.com"
           id="email"
           name="email"
+          defaultValue={client?.email}
         />
       </div>
       <div className="mb-4">
@@ -49,6 +52,7 @@ function Form() {
           placeholder="12345678"
           id="phone"
           name="phone"
+          defaultValue={client?.phone}
         />
       </div>
       <div className="mb-4">
@@ -61,6 +65,7 @@ function Form() {
           placeholder="Give Us a Note"
           id="note"
           name="note"
+          defaultValue={client?.note}
         />
       </div>
     </>

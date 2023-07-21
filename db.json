@@ -1,45 +1,28 @@
 {
   "clientes": [
     {
-      "id": 1,
-      "nombre": "Juan",
-      "telefono": 102013313,
-      "email": "juan@gmail.com",
-      "empresa": "Empresario"
-    },
-    {
-      "id": 2,
-      "nombre": "Karen",
-      "telefono": 138198313,
-      "email": "karen@gmail.com",
-      "empresa": "Gasolinero"
-    },
-    {
-      "id": 3,
-      "nombre": "Josue",
-      "telefono": 31983913,
-      "email": "josue@gmail.com",
-      "empresa": "Najera Technologies"
-    },
-    {
-      "id": 4,
-      "nombre": "Miguel",
-      "telefono": 319381983,
-      "email": "miguel@gmail.com",
-      "empresa": "Najera Techmovil"
-    },
-    {
-      "id": 5,
-      "nombre": "Pedro",
-      "telefono": 1398198938,
-      "email": "pedro@gmail.com",
-      "empresa": "Carnicero"
-    },{
-      "id": 6,
-      "nombre": "Esteban",
-      "telefono": 61918721,
+      "name": "Esteban Najera",
+      "company": "UNA",
       "email": "estebannajera42@gmail.com",
-      "empresa": "estebanDeveloper"
+      "phone": "61918721",
+      "note": "My best version its me",
+      "id": 1
+    },
+    {
+      "name": "Oto Najera",
+      "company": "NajeraTech",
+      "email": "oto.n.m@gmail.com",
+      "phone": "85227152",
+      "note": "hello",
+      "id": 2
+    },
+    {
+      "name": "Jonathan Najera",
+      "company": "Microbiologies",
+      "email": "jona.n.m@gmail.com",
+      "phone": "61918713",
+      "note": "Hi",
+      "id": 3
     }
   ]
 }
