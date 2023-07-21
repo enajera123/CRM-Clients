@@ -31,7 +31,6 @@ function EditClient() {
   const navigate = useNavigate();
   const loaderData = useLoaderData();
   const actionData = useActionData()
-  console.log(actionData)
   return (
     <div>
       <header className="flex justify-between">
