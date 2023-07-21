@@ -1,14 +1,6 @@
 {
   "clientes": [
     {
-      "name": "Esteban Najera",
-      "company": "UNA",
-      "email": "estebannajera42@gmail.com",
-      "phone": "61918721",
-      "note": "My best version its me",
-      "id": 1
-    },
-    {
       "name": "Oto Najera",
       "company": "NajeraTech",
       "email": "oto.n.m@gmail.com",
@@ -23,6 +15,14 @@
       "phone": "61918713",
       "note": "Hi",
       "id": 3
+    },
+    {
+      "name": "Esteban Najera Morales",
+      "company": "UNA",
+      "email": "estebannajera42@gmail.com",
+      "phone": "61918721",
+      "note": "hello",
+      "id": 4
     }
   ]
 }

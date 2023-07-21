@@ -29,6 +29,7 @@ export async function deleteClient(id) {
       method: "delete",
     });
     await response.json();
+    console.log("success")
   } catch (error) {
     console.log(error);
   }

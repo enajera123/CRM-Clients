@@ -5,9 +5,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout";
 import Index, { loader as loaderClients } from "./pages/Index";
 import NewClient, { action as actionNewClient } from "./pages/NewClient";
+import { action as actionDeleteClient } from "./components/Client";
 import ErrorPage from "./pages/ErrorPage";
 
-import EditClient, { loader as loaderEditClient, action as actionEditClient } from "./pages/EditClient";
+import EditClient, {
+  loader as loaderEditClient,
+  action as actionEditClient,
+} from "./pages/EditClient";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +35,10 @@ const router = createBrowserRouter([
         loader: loaderEditClient,
         action: actionEditClient,
         errorElement: <ErrorPage />,
+      },
+      {
+        path: "/client/:id/delete",
+        action: actionDeleteClient,
       },
     ],
   },
